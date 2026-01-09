@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion Request</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:  linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 50px 40px;
+            border-radius:  10px;
+            box-shadow:  0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 550px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom:  15px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size:  15px;
+            line-height: 1.6;
+        }
+        
+        . content {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .content h2 {
+            color:  #333;
+            font-size: 18px;
+            margin-bottom:  15px;
+            text-align: center;
+        }
+        
+        .content p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .content p: last-child {
+            margin-bottom: 0;
+        }
+        
+        .email-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .email-box p {
+            color: #856404;
+            font-size:  14px;
+            margin-bottom: 10px;
+        }
+        
+        .email-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .email-address {
+            font-size: 18px;
+            font-weight:  600;
+            color: #333;
+            word-break: break-all;
+            background: white;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button:hover {
+            transform:  translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
+        }
+        
+        .copy-button {
+            background: #e9ecef;
+            color: #333;
+            border: 1px solid #dee2e6;
+            padding:  10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        
+        . copy-button:hover {
+            background: #dee2e6;
+        }
+        
+        .copy-button. copied {
+            background: #d4edda;
+            color: #155724;
+            border-color: #c3e6cb;
+        }
+        
+        .footer {
+            color: #999;
+            font-size: 12px;
+            margin-top:  30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Data Deletion Request</h1>
+        <p class="subtitle">You have the right to request deletion of your personal data</p>
+        
+        <div class="content">
+            <h2>How to Request Data Deletion</h2>
+            <p>To request the deletion of your personal data, please send an email to the address below with: </p>
+            <ul style="margin-left: 20px; color: #555;">
+                <li>Your full name</li>
+                <li>The email address associated with your account</li>
+                <li>A clear statement requesting data deletion</li>
+            </ul>
+            <p style="margin-top: 15px;">Your request will be processed in accordance with applicable data protection laws, typically within 30 days.</p>
+        </div>
+        
+        <div class="email-box">
+            <p><strong>📧 Send your deletion request to:</strong></p>
+            <div class="email-address">japhetgondwe20@gmail. com</div>
+            <button class="copy-button" onclick="copyEmail()">📋 Copy Email Address</button>
+        </div>
+        
+        <a href="mailto:japhetgondwe20@gmail.com? subject=Data%20Deletion%20Request" class="cta-button">
+            ✉️ Send Email Now
+        </a>
+        
+        <div class="footer">
+            <p>We take your privacy seriously and will process all deletion requests promptly.</p>
+        </div>
+    </div>
+    
+    <script>
+        function copyEmail() {
+            const email = 'japhetgondwe20@gmail.com';
+            navigator. clipboard.writeText(email).then(() => {
+                const button = event.target;
+                button.textContent = '✓ Copied!';
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.textContent = '📋 Copy Email Address';
+                    button. classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
